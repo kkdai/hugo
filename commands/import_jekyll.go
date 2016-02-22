@@ -439,7 +439,7 @@ func convertJekyllPost(path, relPath, targetDir string, draft bool) error {
 }
 
 func convertJekyllMetaData(m interface{}, postName string, postDate time.Time, draft bool) (interface{}, error) {
-	url := postDate.Format("/2006/01/02/") + postName + "/"
+	url := "/" + postName + "/"
 
 	metadata, err := cast.ToStringMapE(m)
 	if err != nil {
